@@ -1,0 +1,17 @@
+#! /bin/bash
+
+apt update;
+
+wget -c https://go.dev/dl/go1.22.0.linux-amd64.tar.gz;
+
+tar -C /usr/local/ -xzf go1.22.0.linux-amd64.tar.gz;
+
+PATH=$PATH:/usr/local/go/bin;
+
+mkdir $HOME/nimble && cd $HOME/nimble;
+
+git clone https://github.com/nimble-technology/wallet-public.git;
+
+cd wallet-public;
+
+/root/go/bin/nimble-networkd keys add ilovenimble;
