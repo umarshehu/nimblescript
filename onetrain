@@ -16,4 +16,16 @@ cd wallet-public;
 
 make install;
 
-/root/go/bin/nimble-networkd keys add ilovenimble;
+apt update;
+
+apt install python3-venv;
+
+cd  $HOME/nimble;
+
+git clone https://github.com/nimble-technology/nimble-miner-public.git;
+
+cd nimble-miner-public;
+
+make install;
+
+source ./nimenv_localminers/bin/activate;
